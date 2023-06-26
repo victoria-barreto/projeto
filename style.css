@@ -36,11 +36,12 @@ body * {
     text-align: center;
 }
 #container {
-    width: 360px;
+    width: 100%;
     margin-top: 56px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
+    max-width: 588px;
    
    /* para fazer com que o nome de usuario fique junto ao avatar */
 }
