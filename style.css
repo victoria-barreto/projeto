@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+:root{
+    --text-color: white;
+    --bg-url:url(./assets/bg-mobile.jpg);
+    --strocke-color:  rgba(255, 255, 255, 0.50);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --sufarce-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --button-bg-url: url(./assets/moon-stars.svg);
+
+}  
+.Light{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --strocke-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --sufarce-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --button-bg-url: url(./assets/sun.svg);
+
+}
+
+body{
+    background: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center ;
+    background-size: cover;
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+}
+#container {
+    width: 360px;
+    margin-top: 56px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+   
+   /* para fazer com que o nome de usuario fique junto ao avatar */
+}
+#profile img {
+    display: block;
+    width: 112px;
+    margin: auto;
+    padding: 24px;
+    padding-bottom: 0px;
+}
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 30px;
+   
+}
+
+/* botão com o icone (lua e sol) */
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--button-bg-url) no-repeat center;
+    border: 0px;
+    border-radius: 50%;
+
+    position: relative;
+    z-index: 1;
+    margin: 0px 1px;
+    transform: translateY(-15%);
+    transform: translateX(-35%);
+}
+
+ #switch span {
+    display: block;
+    width: 50px;
+    height: 20px;
+    border: 1px solid var(--strocke-color);
+    background: var(--surface-color);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999px;
+    margin: 4px auto;
+    transform: translateY(-158%);
+}
+
+.Light #switch button {
+    transform: translateY(-15%);
+    transform: translateX(35%);
+}
+
+/* Links */
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 24px 0px;
+}
+ ul li a{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--strocke-color);
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background all 0.2s;
+ }
+
+ /*  pseudo-selector */
+ul li a:hover {
+    background: var(--sufarce-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+/* links sociais */
+
+#social-links {
+    display: flex;
+    justify-content: center;
+
+    padding: 24px 0px;
+    font-size: 24px;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+
+}
+#social-links a:hover {
+    background: var(--highlight-color);
+    padding: 16px;
+
+}
+
+footer{
+    padding: 24px 0px;
+    text-align: center;
+    font-size: 14px;
+
+}
